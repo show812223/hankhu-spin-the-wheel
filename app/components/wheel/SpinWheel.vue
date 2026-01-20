@@ -77,7 +77,7 @@ const truncateName = (name: string, maxLength: number = 10) => {
 
 <template>
   <div class="wheel-container">
-    <svg :width="size" :height="size" :viewBox="`0 0 ${size} ${size}`">
+    <svg viewBox="0 0 500 500" class="wheel-svg">
       <!-- Wheel group with rotation -->
       <g :style="wheelStyle" :transform-origin="`${centerX} ${centerY}`">
         <!-- Segments -->
@@ -129,6 +129,13 @@ const truncateName = (name: string, maxLength: number = 10) => {
 .wheel-container {
   position: relative;
   display: inline-block;
+  width: 60vw;
+  max-width: 700px;
+}
+
+.wheel-svg {
+  width: 100%;
+  height: auto;
 }
 
 .segment-text {
