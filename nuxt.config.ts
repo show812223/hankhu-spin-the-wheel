@@ -14,11 +14,26 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Spin the Wheel - 幸運輪盤',
+      title: 'Lucky Wheel - 幸運輪盤',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: '輪盤抽獎遊戲 - 轉動輪盤決定幸運贏家！' },
+      ],
+      link: [
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.googleapis.com',
+        },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossorigin: '',
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap',
+        },
       ],
     },
   },
