@@ -2,29 +2,31 @@ import { defineVuetifyConfiguration } from 'vuetify-nuxt-module/custom-configura
 
 export default defineVuetifyConfiguration({
   theme: {
-    defaultTheme: 'light',
+    defaultTheme: 'dark',
     themes: {
-      light: {
-        dark: false,
+      dark: {
+        dark: true,
         colors: {
-          primary: '#7EB8DA',    // 柔和天藍
-          secondary: '#F8B4C4',  // 櫻花粉
-          accent: '#B5EAD7',     // 薄荷綠
-          success: '#98D8C8',    // 青瓷綠
-          warning: '#FFE5B4',    // 奶油黃
-          error: '#F7CAC9',      // 玫瑰粉
-          background: '#FDF9F6', // 米白色背景
-          surface: '#FFFFFF',
+          primary: '#7C3AED',      // Electric Purple
+          secondary: '#A78BFA',    // Soft Purple
+          accent: '#06B6D4',       // Cyan
+          success: '#10B981',      // Emerald
+          warning: '#F59E0B',      // Amber
+          error: '#F43F5E',        // Rose
+          background: '#0F0F23',   // Deep Dark
+          surface: '#1A1A2E',      // Card Surface
+          'on-background': '#E2E8F0',
+          'on-surface': '#E2E8F0',
         },
       },
     },
   },
   defaults: {
     VBtn: {
-      rounded: 'lg',
+      rounded: 'xl',
     },
     VCard: {
-      rounded: 'lg',
+      rounded: 'xl',
     },
     VTextField: {
       variant: 'outlined',
@@ -33,6 +35,9 @@ export default defineVuetifyConfiguration({
     VTextarea: {
       variant: 'outlined',
       density: 'comfortable',
+    },
+    VChip: {
+      rounded: 'lg',
     },
   },
 })
