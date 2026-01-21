@@ -115,8 +115,8 @@ const chipColors = [
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(124, 58, 237, 0.3);
-  border-radius: 20px;
-  padding: 1.5rem;
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -125,12 +125,12 @@ const chipColors = [
 .card-header {
   display: flex;
   align-items: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
 }
 
 .card-title {
   font-family: 'Fredoka', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #E2E8F0;
 }
@@ -138,7 +138,7 @@ const chipColors = [
 .card-content {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 /* Stats */
@@ -146,10 +146,10 @@ const chipColors = [
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
+  gap: 1.5rem;
+  padding: 0.75rem;
   background: rgba(124, 58, 237, 0.1);
-  border-radius: 12px;
+  border-radius: 10px;
   border: 1px solid rgba(124, 58, 237, 0.2);
 }
 
@@ -169,7 +169,7 @@ const chipColors = [
 
 .stat-value {
   font-family: 'Fredoka', sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #E2E8F0;
 }
@@ -183,7 +183,7 @@ const chipColors = [
 
 .stat-divider {
   width: 1px;
-  height: 40px;
+  height: 32px;
   background: linear-gradient(180deg, transparent, rgba(124, 58, 237, 0.5), transparent);
 }
 
@@ -196,14 +196,14 @@ const chipColors = [
 .spin-btn {
   position: relative;
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1.25rem;
   font-family: 'Fredoka', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #FFFFFF;
   background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%);
   border: none;
-  border-radius: 14px;
+  border-radius: 12px;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -269,14 +269,14 @@ const chipColors = [
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   font-family: 'Nunito', sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: #94A3B8;
   background: transparent;
   border: 1px solid rgba(148, 163, 184, 0.3);
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
 }

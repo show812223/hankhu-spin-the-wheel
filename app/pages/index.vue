@@ -78,43 +78,40 @@ const isLastRound = computed(() => activeParticipants.value.length <= 2)
       <div class="gradient-orb orb-3"></div>
     </div>
 
-    <v-container fluid class="main-content pa-4 pa-md-8">
+    <div class="main-content">
       <!-- Header -->
-      <div class="text-center mb-6 mb-md-10">
+      <div class="text-center header-section">
         <h1 class="app-title">
           <span class="title-icon">
-            <v-icon size="40" color="primary">mdi-star-four-points</v-icon>
+            <v-icon size="32" color="primary">mdi-star-four-points</v-icon>
           </span>
           Lucky Wheel
           <span class="title-icon">
-            <v-icon size="40" color="accent">mdi-star-four-points</v-icon>
+            <v-icon size="32" color="accent">mdi-star-four-points</v-icon>
           </span>
         </h1>
-        <p class="app-subtitle">Spin to Win!</p>
       </div>
 
-      <v-row align="center" justify="center">
+      <div class="content-row">
         <!-- Wheel Section -->
-        <v-col cols="12" lg="7" class="d-flex justify-center align-center">
-          <div class="wheel-section">
-            <WheelSpinWheel
-              :participants="activeParticipants"
-              :rotation="rotation"
-              :is-spinning="isSpinning"
-            />
-          </div>
-        </v-col>
+        <div class="wheel-section">
+          <WheelSpinWheel
+            :participants="activeParticipants"
+            :rotation="rotation"
+            :is-spinning="isSpinning"
+          />
+        </div>
 
         <!-- Control Section -->
-        <v-col cols="12" lg="5">
-          <div class="control-section">
+        <div class="control-section">
+          <div class="control-inner">
             <!-- Game Controls -->
             <ControlsGame
               :game-phase="gamePhase"
               :active-count="activeParticipants.length"
               :round="round"
               :winners="winners"
-              class="mb-4"
+              class="mb-3"
               @spin="handleSpin"
               @reset="handleResetClick"
             />
@@ -122,7 +119,7 @@ const isLastRound = computed(() => activeParticipants.value.length <= 2)
             <!-- Participant Input (only show when not spinning or finished) -->
             <ParticipantInput
               v-if="gamePhase !== 'spinning'"
-              class="mb-4"
+              class="mb-3"
               @add="addParticipants"
             />
 
@@ -133,9 +130,9 @@ const isLastRound = computed(() => activeParticipants.value.length <= 2)
               @remove="removeParticipant"
             />
           </div>
-        </v-col>
-      </v-row>
-    </v-container>
+        </div>
+      </div>
+    </div>
 
     <!-- Winner Dialog -->
     <DialogWinner
@@ -155,7 +152,8 @@ const isLastRound = computed(() => activeParticipants.value.length <= 2)
 
 <style scoped>
 .app-container {
-  min-height: 100vh;
+  height: 100vh;
+  height: 100dvh;
   position: relative;
   overflow: hidden;
   font-family: 'Nunito', sans-serif;
@@ -179,26 +177,26 @@ const isLastRound = computed(() => activeParticipants.value.length <= 2)
 }
 
 .orb-1 {
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   background: radial-gradient(circle, #7C3AED 0%, transparent 70%);
-  top: -200px;
+  top: -150px;
   left: -100px;
   animation-delay: 0s;
 }
 
 .orb-2 {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   background: radial-gradient(circle, #F43F5E 0%, transparent 70%);
-  bottom: -150px;
+  bottom: -100px;
   right: -100px;
   animation-delay: -7s;
 }
 
 .orb-3 {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   background: radial-gradient(circle, #06B6D4 0%, transparent 70%);
   top: 50%;
   left: 50%;
@@ -224,13 +222,21 @@ const isLastRound = computed(() => activeParticipants.value.length <= 2)
 .main-content {
   position: relative;
   z-index: 1;
-  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
 }
 
 /* Header Styles */
+.header-section {
+  flex-shrink: 0;
+  padding: 0.5rem 0;
+}
+
 .app-title {
   font-family: 'Fredoka', sans-serif;
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 700;
   background: linear-gradient(135deg, #A78BFA 0%, #7C3AED 50%, #F43F5E 100%);
   -webkit-background-clip: text;
@@ -239,7 +245,7 @@ const isLastRound = computed(() => activeParticipants.value.length <= 2)
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  text-shadow: 0 0 40px rgba(124, 58, 237, 0.5);
+  margin: 0;
 }
 
 .title-icon {
@@ -261,30 +267,95 @@ const isLastRound = computed(() => activeParticipants.value.length <= 2)
   }
 }
 
-.app-subtitle {
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.25rem;
-  color: rgba(226, 232, 240, 0.7);
-  margin-top: 0.5rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+/* Content Row */
+.content-row {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  min-height: 0;
+  padding: 0.5rem 0;
 }
 
 /* Sections */
 .wheel-section {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex: 1;
+  max-width: 55%;
+  height: 100%;
 }
 
 .control-section {
-  max-width: 420px;
-  margin: 0 auto;
+  flex: 0 0 380px;
+  max-width: 380px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (max-width: 1280px) {
+.control-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 100%;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.control-inner::-webkit-scrollbar {
+  width: 4px;
+}
+
+.control-inner::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.control-inner::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.3);
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   .wheel-section {
-    margin-bottom: 2rem;
+    max-width: 100%;
+    flex: 0 0 auto;
+    height: auto;
+    max-height: 50vh;
+  }
+
+  .control-section {
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+    min-height: 0;
+  }
+
+  .control-inner {
+    flex: 1;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    padding: 0.75rem 1rem;
+  }
+
+  .header-section {
+    padding: 0.25rem 0;
+  }
+
+  .wheel-section {
+    max-height: 45vh;
   }
 }
 
