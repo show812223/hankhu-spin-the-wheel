@@ -189,9 +189,9 @@ const truncateName = (name: string, maxLength: number = 10) => {
 .wheel-container {
   position: relative;
   display: inline-block;
-  width: 55vw;
-  max-width: 550px;
-  min-width: 300px;
+  width: min(50vw, 50vh);
+  max-width: 480px;
+  min-width: 280px;
 }
 
 /* Outer glow ring */
@@ -240,14 +240,14 @@ const truncateName = (name: string, maxLength: number = 10) => {
 
 .deco-light {
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   background: #FFFFFF;
   border-radius: 50%;
   top: 50%;
   left: 50%;
-  transform: rotate(calc(var(--i) * 15deg)) translateY(calc(-50% - min(27.5vw, 275px) - 5px));
-  box-shadow: 0 0 10px #A78BFA, 0 0 20px #7C3AED;
+  transform: rotate(calc(var(--i) * 15deg)) translateY(calc(-50% - min(25vw, 25vh, 240px) - 5px));
+  box-shadow: 0 0 8px #A78BFA, 0 0 16px #7C3AED;
   animation: blink 2s ease-in-out infinite;
   animation-delay: calc(var(--i) * 0.08s);
 }

@@ -54,8 +54,8 @@ const placeholder = `輸入參與者名稱
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(6, 182, 212, 0.3);
-  border-radius: 20px;
-  padding: 1.5rem;
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -64,31 +64,31 @@ const placeholder = `輸入參與者名稱
 .card-header {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .card-title {
   font-family: 'Fredoka', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #E2E8F0;
 }
 
 .input-wrapper {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .custom-textarea {
   width: 100%;
-  padding: 1rem;
+  padding: 0.75rem;
   font-family: 'Nunito', sans-serif;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   color: #E2E8F0;
   background: rgba(15, 15, 35, 0.6);
   border: 1px solid rgba(6, 182, 212, 0.3);
-  border-radius: 12px;
+  border-radius: 10px;
   resize: vertical;
-  min-height: 80px;
+  min-height: 60px;
   transition: all 0.2s ease;
 }
 
@@ -107,14 +107,14 @@ const placeholder = `輸入參與者名稱
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 0.875rem 1.5rem;
+  padding: 0.625rem 1.25rem;
   font-family: 'Fredoka', sans-serif;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   color: #FFFFFF;
   background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%);
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);

@@ -81,8 +81,8 @@ const getAvatarColor = (index: number) => avatarColors[index % avatarColors.leng
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(16, 185, 129, 0.3);
-  border-radius: 20px;
-  padding: 1.5rem;
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -91,12 +91,12 @@ const getAvatarColor = (index: number) => avatarColors[index % avatarColors.leng
 .card-header {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .card-title {
   font-family: 'Fredoka', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #E2E8F0;
   flex: 1;
@@ -118,7 +118,7 @@ const getAvatarColor = (index: number) => avatarColors[index % avatarColors.leng
 }
 
 .participant-list {
-  max-height: 280px;
+  max-height: 180px;
   overflow-y: auto;
   padding-right: 4px;
 }
@@ -144,12 +144,12 @@ const getAvatarColor = (index: number) => avatarColors[index % avatarColors.leng
 .participant-item {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem;
-  margin-bottom: 0.5rem;
+  gap: 0.5rem;
+  padding: 0.5rem 0.625rem;
+  margin-bottom: 0.375rem;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+  border-radius: 10px;
   transition: all 0.2s ease;
 }
 
@@ -167,11 +167,11 @@ const getAvatarColor = (index: number) => avatarColors[index % avatarColors.leng
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
   font-family: 'Fredoka', sans-serif;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: #FFFFFF;
   flex-shrink: 0;
@@ -187,7 +187,7 @@ const getAvatarColor = (index: number) => avatarColors[index % avatarColors.leng
 
 .participant-name {
   font-family: 'Nunito', sans-serif;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: #E2E8F0;
   white-space: nowrap;
@@ -216,11 +216,11 @@ const getAvatarColor = (index: number) => avatarColors[index % avatarColors.leng
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   background: transparent;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   color: #64748B;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -238,21 +238,21 @@ const getAvatarColor = (index: number) => avatarColors[index % avatarColors.leng
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem;
+  padding: 1.25rem 1rem;
   text-align: center;
 }
 
 .empty-text {
   font-family: 'Nunito', sans-serif;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   color: #94A3B8;
   margin: 0;
 }
 
 .empty-hint {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   color: #64748B;
-  margin: 0.5rem 0 0;
+  margin: 0.375rem 0 0;
 }
 
 /* List Transitions */
